@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Yoon Ei Phyu - Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #2a4d69;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px 15px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+        .navbar a:hover {
+            background: #4b86b4;
+        }
+
+        /* Resume Container */
+        .resume-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2a4d69;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 120px;
+            border-radius: 50%;
+            border: 3px solid #2a4d69;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        h2 {
+            color: #4b86b4;
+            border-left: 5px solid #2a4d69;
+            padding-left: 10px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin: 5px 0;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul li {
+            background: #e9f2f9;
+            margin: 8px 0;
+            padding: 10px 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+        ul li::before {
+            content: "✔";
+            color: #2a4d69;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        p strong::before {
+            content: "📌 ";
+            color: #2a4d69;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="change.html"> Change </a>
+        <a href="converter.html"> Converter</a>
+        <a href="distance.html"> Distance</a>
+        <a href="grade.html"> Grade</a>
+    </div>
+
+    <!-- Resume Content -->
+    <div class="resume-container">
+        <h1>Yoon Ei Phyu</h1>
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile Picture">
+
+        <h2>Contact</h2>
+        <p><strong>Postal Address:</strong> Kasem Bundit University Dormitory Building A</p>
+        <p><strong>Email:</strong> yooneiphyu.npi@gmail.com</p>
+        <p><strong>Phone:</strong> 062-315-6204</p>
+
+        <h2>Experience</h2>
+        <ul>
+            <li>2010 - 2015: Primary School</li>
+            <li>2015 - 2022: Secondary School</li>
+            <li>2023: Completed GED Program</li>
+            <li>2024: Started studying DTI Major at Kasem Bundit University</li>
+            <li>2025: Now a 2nd Year DTI Major Student</li>
+        </ul>
+
+        <h2>Skills</h2>
+        <ul>
+            <li>English - Fluently</li>
+            <li>Thai - Basic</li>
+            <li>Computer Language - Python</li>
+        </ul>
+
+        <h2>Work History</h2>
+        <ul>
+            <li>2022: Part-time Teacher at Primary School</li>
+            <li>2023 - 2025: GED 3 Subjects Guide (Part-time)</li>
+        </ul>
+    </div>
+</body>
+</html>

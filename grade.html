@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Grade Assignment</title>
+  <style>
+    body {
+      background-color: #e9ecef;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .box {
+      background-color: white;
+      border: 3px solid #007BFF;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      padding: 40px 30px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h1 {
+      color: #007BFF;
+      margin-bottom: 25px;
+    }
+
+    input[type="number"] {
+      padding: 10px;
+      font-size: 16px;
+      width: 150px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-right: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .back-button {
+      background-color: #6c757d;
+      margin-left: 10px;
+    }
+
+    .back-button:hover {
+      background-color: #5a6268;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h1>Grade Assignment</h1>
+    <p>
+      Enter the Score:
+      <input type="number" id="scoreInput" placeholder="0–100" />
+      <button onclick="checkGrade()">Submit</button>
+      <button class="back-button" onclick="goBack()">Back</button>
+    </p>
+    <div id="gradeResult" class="result"></div>
+  </div>
+
+  <script>
+    function checkGrade() {
+      let scoreValue = document.getElementById("scoreInput").value.trim();
+      let score = parseInt(scoreValue);
+      let grade = "";
+
+      if (scoreValue === "" || isNaN(score) || score < 0 || score > 100) {
+        grade = "❌ Invalid score. Please enter a number between 0 and 100.";
+      } else if (score >= 90) {
+        grade = '✅ You got "A" grade.';
+      } else if (score >= 80) {
+        grade = '✅ You got "B" grade.';
+      } else if (score >= 70) {
+        grade = '✅ You got "C" grade.';
+      } else if (score >= 60) {
+        grade = '✅ You got "D" grade.';
+      } else {
+        grade = '⚠️ You got "F" grade.';
+      }
+
+      document.getElementById("gradeResult").innerHTML = grade;
+    }
+
+    function goBack() {
+      history.back(); // Go to previous page in Chrome tab
+    }
+  </script>
+
+</body>
+</html>

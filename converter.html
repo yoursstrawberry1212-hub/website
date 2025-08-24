@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Measurement Converter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 10px;
+    }
+
+    h1 {
+      color: #007BFF;
+      margin-bottom: 25px;
+    }
+
+    .converter-box {
+      background: #fff;
+      border: 2px solid #007BFF;
+      border-radius: 15px;
+      padding: 25px;
+      margin-bottom: 30px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .converter-box h2 {
+      color: #007BFF;
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 15px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .result {
+      font-size: 16px;
+      color: #333;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Measurement Converter</h1>
+
+  <!-- Length Converter -->
+  <div class="converter-box">
+    <h2>Length Converter (Inch ➜ CM)</h2>
+    <label for="inchInput">Enter inch:</label>
+    <input type="number" id="inchInput" placeholder="Enter inches">
+    <button onclick="convertInchToCm()">Convert</button>
+    <div id="lengthResult" class="result"></div>
+  </div>
+
+  <!-- Height Converter -->
+  <div class="converter-box">
+    <h2>Height Converter (Feet ➜ Meters)</h2>
+    <label for="feetInput">Enter feet:</label>
+    <input type="number" id="feetInput" placeholder="Enter feet">
+    <button onclick="convertFeetToMeters()">Convert</button>
+    <div id="heightResult" class="result"></div>
+  </div>
+
+  <!-- Temperature Converter -->
+  <div class="converter-box">
+    <h2>Temperature Converter (°F ➜ °C)</h2>
+    <label for="fahrenheitInput">Enter Fahrenheit:</label>
+    <input type="number" id="fahrenheitInput" placeholder="Enter °F">
+    <button onclick="convertFahrenheitToCelsius()">Convert</button>
+    <div id="tempResult" class="result"></div>
+  </div>
+
+  <!-- Area Converter -->
+  <div class="converter-box">
+    <h2>Area Converter (Square Meter ➜ Square Feet)</h2>
+    <label for="sqmInput">Enter square meter:</label>
+    <input type="number" id="sqmInput" placeholder="Enter m²">
+    <button onclick="convertSqmToSqft()">Convert</button>
+    <div id="areaResult" class="result"></div>
+  </div>
+
+  <!-- JavaScript Functions -->
+  <script>
+    function convertInchToCm() {
+      let inch = document.getElementById("inchInput").value;
+      let cm = (inch * 2.54).toFixed(2);
+      document.getElementById("lengthResult").innerHTML = `${inch} inch = ${cm} cm`;
+    }
+
+    function convertFeetToMeters() {
+      let feet = document.getElementById("feetInput").value;
+      let meters = (feet * 0.3048).toFixed(2);
+      document.getElementById("heightResult").innerHTML = `${feet} feet = ${meters} meters`;
+    }
+
+    function convertFahrenheitToCelsius() {
+      let fahrenheit = document.getElementById("fahrenheitInput").value;
+      let celsius = ((fahrenheit - 32) * 5 / 9).toFixed(2);
+      document.getElementById("tempResult").innerHTML = `${fahrenheit}°F = ${celsius}°C`;
+    }
+
+    function convertSqmToSqft() {
+      let sqm = document.getElementById("sqmInput").value;
+      let sqft = (sqm * 10.7639).toFixed(2);
+      document.getElementById("areaResult").innerHTML = `${sqm} m² = ${sqft} ft²`;
+    }
+  </script>
+
+</body>
+</html>
